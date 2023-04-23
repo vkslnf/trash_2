@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+    // Создаем объект car
+    var car = new Object();
+    // Создаем и инициализируем свойства объекта
+    car.producer = "Raspberry Pi";
+    car.price = "$52.25";
+    car.model = "Raspberry Pi 4";
+    
+    // Функция которая отобразит свойства в таблице
+    function getCar()
+    {
+        // получаем элемент по id
+        document.getElementById('car_producer').innerHTML = car.producer;
+        document.getElementById('car_price').innerHTML = car.price;
+        document.getElementById('car_model').innerHTML = car.model;
+        
+        // делаем таблицу видимой
+        document.getElementById('car').style.display = "block";
+    }
+    </script>
+</head>
+<body>
+    <input onclick="getCar()" type="button" id="bttnGetCar" value="Получить свойства" />
+    <table id="car" style="display: none;">
+        <caption>Компьютер</caption>
+        <tr>
+            <td>Производитель</td>
+            <td id="car_producer"></td>
+        </tr><tr>
+            <td>цена</td>
+            <td id="car_price"></td>
+        </tr><tr>
+            <td>Модель</td>
+            <td id="car_model"></td>
+        </tr>
+    </table>
+</body>
+</html>

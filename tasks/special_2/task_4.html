@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<script>
+window.onload = function(){
+    alert("Нажмите кнопку для замены текста страницы");
+    var button = document.getElementById("button");
+    button.onclick = replacement;
+}
+function replacement(){
+    var date = Date();
+    document.getElementsByTagName("h6")[0].innerHTML = date;
+}
+</script>
+
+<body>
+    <h6>Текст размещенный в h6</h6>
+    <button id="button">Кнопка</button>
+</body>
+
+</html>

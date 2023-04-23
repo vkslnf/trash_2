@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+    // Создаем объект car
+    var car = new Object();
+    // Создаем и инициализируем свойства объекта
+    car.color = "каландаришвили 7 ";
+    car.brand = "3";
+    car.model = "1 000 000 ₽";
+    car.price = "перекраска стены";
+    
+    // Функция которая отобразит свойства в таблице
+    function getCar()
+    {
+        // получаем элемент по id
+        document.getElementById('car_color').innerHTML = car.color;
+        document.getElementById('car_brand').innerHTML = car.brand;
+        document.getElementById('car_model').innerHTML = car.model;
+        document.getElementById('car_price').innerHTML = car.price;
+        
+        // делаем таблицу видимой
+        document.getElementById('car').style.display = "block";
+    }
+    </script>
+</head>
+<body>
+    <input onclick="getCar()" type="button" id="bttnGetCar" value="Получить свойства" />
+    <table id="car" style="display: none;">
+        <caption>Квартира</caption>
+        <tr>
+            <td>адрес</td>
+            <td id="car_color"></td>
+        </tr><tr>
+            <td>количество комнат</td>
+            <td id="car_brand"></td>
+        </tr><tr>
+            <td>цена</td>
+            <td id="car_model"></td>
+        </tr>
+        </tr><tr>
+            <td>ремонт</td>
+            <td id="car_price"></td>
+        </tr>
+    </table>
+</body>
+</html>

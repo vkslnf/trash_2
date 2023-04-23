@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<script>
+window.onload = function(){
+    alert("Нажмите кнопку для замены текста страницы");
+    var button = document.getElementById("button");
+    button.onclick = replacement;
+}
+function replacement(){
+    var str = "произошла замена";
+    document.getElementsByTagName("a")[0].innerHTML = str;
+    }
+</script>
+
+<body>
+    <a>Текст размещенный в a</a><br>
+    <button id="button">Кнопка</button>
+</body>
+
+</html>
